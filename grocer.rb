@@ -16,7 +16,7 @@ def apply_coupons(cart, coupons)
       group = coupon[:items] + "W/COUPON"
       cart[coupon[:items]][:count] -= coupon[:num]
       if (cart.key?(group)==false)
-        cart[group] = {price: coupon[:cost, clearance: cart[coupon[:items]][:clearance], count: 1}
+        cart[group] = {price: coupon[:cost], clearance: cart[coupon[:items]][:clearance], count: 1}
       else
         cart[group][:count] += 1
       end
