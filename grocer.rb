@@ -51,5 +51,5 @@ cart.each do |product, info|
   total += (info[:price] * ino[:count])
 end
 end
-total > 100? total * 0.9 : total 
+total > 100? total * 0.9 :total 
 end
