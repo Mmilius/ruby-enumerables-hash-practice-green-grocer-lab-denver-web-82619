@@ -14,7 +14,7 @@ def apply_coupons(cart, coupons)
  coupons.each do |coupon|
    name = coupon{:item]
    coupon_item_number = coupon[:num]
-   cart
+   cart_item = cart[coupon_name]
 
 
 def apply_clearance(cart)
