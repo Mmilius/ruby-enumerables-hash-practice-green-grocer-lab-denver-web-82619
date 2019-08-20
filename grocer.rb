@@ -19,9 +19,9 @@ cart.each do |product, info|
       if info[:count] >= coupon_hash[:num]
         info[:count] -= coupon_hash[:num]
         if new_cart.include?(product +"W/COUPON")
-          new_cart[product +"W/COUPON"][:count] += 1
+          new_cart[product+" W/COUPON"][:count] += 1
         else 
-          new_cart[product +"W/COUPON"] = {
+          new_cart[product+" W/COUPON"] = {
             :price => coupon_hash[:cost],
             :clearance => info[:clearance],
             :count => 1
