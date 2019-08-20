@@ -10,6 +10,20 @@ end
 new_cart
 end
 
+def apply_coupons(cart, coupons)
+  coupons.each do |coupon|
+    if cart.key?(coupon:items) && cart[coupon[:items]][:count] >= coupon[:num]
+      group = coupon[:items] + "W/COUPON"
+      cart[coupon[:items]][:count] -= coupon[:num]
+      if (cart.key?(group)==false)
+        cart[group] = {price: coupon[:cost, clearance: cart[coupon[:item]][:clearance], count: 1}
+      else
+        cart[group][:count] += 1
+      end
+    end
+  end
+  cart
+end
 
  
 
