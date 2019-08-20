@@ -41,16 +41,5 @@ cart
 end
 
 def checkout(cart, coupons)
-consolidated_cart = consolidate_cart(cart)
-coupons_applied = apply_coupons(cart: consolidated_cart, coupons: coupons)
-clearance_applied = apply_clearance(cart: coupons_applied)
+consolidate_cart(cart)
 
-clearance_applied.each do |product, info|
- total += info [:price]*info[:count]
- end
- if total > 100 
-   total*0.9
- else
-   total
- end
- end
