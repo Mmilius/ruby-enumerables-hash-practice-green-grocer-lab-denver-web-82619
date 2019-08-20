@@ -11,7 +11,21 @@ new_cart
 end
 
 def apply_coupons(cart, coupons) 
- 
+ coupons.each do |coupon|
+coupon.each do |a, value|
+n = coupon[:item]
+
+if cart[n] && cart[n][:count] >= coupon[:num] if cart[“#{n} W/COUPON”] cart [“#{n} W/COUPON” ] [:count] += 1
+else
+cart[“#{n} W/COUPON”] = {:price => coupon[:cost]/coupon[:num], :clearance => cart[n][:clearance], :count => coupon[:num]} end
+
+cart[n][:count] -= coupon[:num]
+end
+end
+end
+cart
+end
+
   
 
 def apply_clearance(cart)
