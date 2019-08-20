@@ -15,7 +15,7 @@ new_cart = {}
 cart.each do |product, info|
   new_cart[product] = info
   coupons.each do | coupon_hash|
-    if food_item == coupon_hash[:item]
+    if product == coupon_hash[:item]
       if info[:count] >= coupon_hash[:num]
         info[:count] -= coupon_hash[num]
         if new_cart.include?(product+"W/COUPON")
