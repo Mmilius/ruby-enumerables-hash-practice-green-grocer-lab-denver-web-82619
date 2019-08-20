@@ -41,7 +41,11 @@ cart
 end
 
 def checkout(cart, coupons)
-
+  new_cart={}
+consolidate_cart(apply_coupons, apply_clearance)
+total 
+return total 
+if total > 100
 
 
 
