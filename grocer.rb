@@ -47,7 +47,7 @@ clearance_applied = apply_clearance(cart: coupons_applied)
 total = 0 
 
 clearance_applied.each do |product, info|
- total += info [:price] * info[:count]
+ total += info [:price]*info[:count]
  end
  if total > 100 
    total*0.9
