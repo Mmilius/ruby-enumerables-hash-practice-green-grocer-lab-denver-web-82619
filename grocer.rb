@@ -46,11 +46,12 @@ cart = consolidate_cart(cart: cart)
 cart = apply_coupons(cart: cart, coupons: coupons)
 cart = apply_clearance(cart: cart)
 
-result = 0
-
 cart.each do |product, info|
- result += (info[:price] * info[:count])
+ total += info [:price] * info[:count]
  end
+ if total > 100 
+   total*0.9
+ else
+   total
  end
- result > 100 ? total * 0.90 : total 
  end
