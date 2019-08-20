@@ -48,3 +48,8 @@ cart = apply_clearance(cart: cart)
 
 cart.each do |product, info|
   unless info[:count] == 0
+  total += (info[:price] * ino[:count])
+end
+end
+total > 100? total * 0.9 : total 
+end
